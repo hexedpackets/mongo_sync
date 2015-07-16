@@ -1,0 +1,2 @@
+defmodule MongoSync do
+end
