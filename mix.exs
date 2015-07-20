@@ -21,7 +21,7 @@ defmodule MongoSync.Mixfile do
   end
 
   def application do
-    [applications: [:logger, :poison, :consul],
+    [applications: [:logger, :poison, :consul, :mongodb],
      mod: {MongoSync.Supervisor, []}]
   end
 
