@@ -1,10 +1,18 @@
 use Mix.Config
 
 # Indicates the key in Consul to store members under
-config :mongo_sync, :consul_root, "services/db"
+config :mongo_sync, :consul_root, System.get_env("MONGO_CONSUL_ROOT") || "services/db"
 
 # Whether to regularly sync with Consul or only have syncing manually started
-config :mongo_sync, :auto_sync, true
+auto_sync = case System.get_env("MONGO_AUTO_SYNC") do
+  nil -> false
+  val -> String.to_atom(val)
+end
+config :mongo_sync, :auto_sync, auto_sync
 
 # How often to sync with Consul when :auto_sync is enabled
-config :mongo_sync, :interval, 10000
+interval = case System.get_env("MONGO_SYNC_INTERVAL") do
+  nil -> 10000
+  val -> String.to_integer(val)
+end
+config :mongo_sync, :interval, interval

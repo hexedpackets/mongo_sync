@@ -29,3 +29,5 @@ config :mongo_sync, :auto_sync, true
 # How often to sync with Consul when :auto_sync is enabled
 config :mongo_sync, :interval, 10000
 ```
+
+These can also be configured with the environmental variables `MONGO_CONSUL_ROOT`, `MONGO_AUTO_SYNC`, and `MONGO_SYNC_INTERVAL` when using mongo_sync as a standalone application.
