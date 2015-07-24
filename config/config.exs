@@ -16,3 +16,15 @@ interval = case System.get_env("MONGO_SYNC_INTERVAL") do
   val -> String.to_integer(val)
 end
 config :mongo_sync, :interval, interval
+
+# Mongo server connection params
+host = case System.get_env("MONGO_HOST") do
+  nil -> '127.0.0.1'
+  val -> to_char_list(val)
+end
+config :mongo_sync, :mongo_host, host
+port = case System.get_env("MONGO_PORT") do
+  nil -> 27017
+  val -> String.to_integer(val)
+end
+config :mongo_sync, :mongo_port, port

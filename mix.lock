@@ -1,8 +1,9 @@
-%{"bson": {:git, "git://github.com/soundrop/bson-erlang", "3e6d7d5c58935768104f38bf9df96f213e139df9", [ref: "HEAD"]},
+%{"bson": {:git, "git://github.com/comtihon/bson-erlang", "3e6d7d5c58935768104f38bf9df96f213e139df9", [ref: "master"]},
   "consul": {:git, "git://github.com/hexedpackets/exconsul.git", "dd92893e7130a166d7c2b673cedde24e8dc56dca", []},
   "hackney": {:hex, :hackney, "1.2.0"},
   "httpoison": {:hex, :httpoison, "0.7.0"},
   "idna": {:hex, :idna, "1.0.2"},
-  "mongodb": {:git, "git://github.com/comtihon/mongodb-erlang.git", "4e8a25abca6bef4fee849d50f86d85c089af5d08", []},
+  "mongodb": {:git, "git://github.com/comtihon/mongodb-erlang.git", "ec3d6f92a853e7f8e2a955b83ee9f03cc5536e74", []},
+  "pbkdf2": {:git, "https://github.com/basho/erlang-pbkdf2.git", "7076584f5377e98600a7e2cb81980b2992fb2f71", [ref: "master"]},
   "poison": {:hex, :poison, "1.4.0"},
   "ssl_verify_hostname": {:hex, :ssl_verify_hostname, "1.0.5"}}

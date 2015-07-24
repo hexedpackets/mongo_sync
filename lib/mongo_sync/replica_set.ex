@@ -3,7 +3,7 @@ defmodule MongoSync.ReplicaSet do
   Get the status of the replica set at localhost:27017 as a keyword list.
   """
   def status do
-    {:ok, conn} = :mongo.connect("admin")
+    {:ok, conn} = :mongo.connect("admin", [{:host, MongoSync.host}, {:port, MongoSync.port}])
     {true, info} = :mongo.command(conn, {"replSetGetStatus", 1})
     flat_tuple_to_keywords(info)
   end
